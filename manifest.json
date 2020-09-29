@@ -1,0 +1,35 @@
+{
+    "name": "Github 加速器",
+    "description": "Github 加速器, Github 加速",
+    "version": "1.0.3",
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "activeTab"
+    ],
+    "background":
+    {
+        "scripts": ["background.js"]
+    },
+    "manifest_version": 2,
+    "content_scripts": [
+    {
+        "js": [
+            "jquery.min.js",
+            "github-booster.js"
+        ],
+        "matches": [
+            "https://github.com/*",
+            "https://github.com.cnpmjs.org/*"  
+        ]
+    }],
+    "icons":
+    {
+        "128": "github-booster.png"
+    },
+    "browser_action":
+    {
+        "default_icon": "github-booster.png",
+        "default_title": "Github 加速器"
+    }
+}
